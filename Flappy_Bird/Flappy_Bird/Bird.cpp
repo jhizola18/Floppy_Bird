@@ -1,26 +1,50 @@
 #include "Bird.h"
 #include <raylib.h>
+#include <iostream>
 
-flappy::flappy(const bool* bird, float radius, Color color)
+flappy::flappy(int wall, int ceiling, float radius, Color color)
 	:
 	radius(radius),
 	color(color),
-	bird(bird)
-{
+	ceiling(ceiling),
+	wall(wall)
 	
+{
+	gravity = 7;
 };
 
 
 
-void flappy::DrawBird() const
+void flappy::DrawBird()
 {
-	DrawCircle(80, GetScreenHeight()/2, (float)radius, color);
+	DrawCircle(wall, ceiling, radius, color);
 }
 
-void flappy::Draw() const
+void flappy::Draw()
 {
 	DrawBird();	
 }
+
+void flappy::bird_Movement()
+{
+	//y position got updated bt adding the value of the current y position
+	// and the gravity
+	ceiling = ceiling + gravity;
+	if (ceiling + radius >= GetScreenHeight() || ceiling - radius <= 0)
+	{
+		//this is to reverse the gravitational force that make the
+		//the object move at the first place
+		gravity *= -1;
+		//DrawText("Game Over", 350,  300, 25, BLACK);
+	}
+
+		
+	
+}
+
+
+
+
 
 
 

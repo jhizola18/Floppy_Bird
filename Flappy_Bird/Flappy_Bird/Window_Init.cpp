@@ -6,7 +6,7 @@
 
 MainGame::MainGame(int Width, int Height, int fps, std::string title)
 	:
-	flap({0}, 24, RAYWHITE)
+	flap(80, Height/2, 24, BLACK)
 {
 	assert(!GetWindowHandle());
 	InitWindow(Width, Height, title.c_str());
@@ -36,11 +36,12 @@ void MainGame::gameLoop()
 void MainGame::Draw()
 {
 	flap.Draw();
-	ClearBackground(BLACK);	
+	ClearBackground(LIGHTGRAY);	
 }
 
 void MainGame::Update()
 {
+	flap.bird_Movement();
 	
 }
 
