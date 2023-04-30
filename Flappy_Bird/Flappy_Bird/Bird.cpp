@@ -10,7 +10,7 @@ flappy::flappy(int wall, int ceiling, float radius, Color color)
 	wall(wall)
 	
 {
-	gravity = 7;
+	gravity = 3;
 };
 
 
@@ -27,15 +27,31 @@ void flappy::Draw()
 
 void flappy::bird_Movement()
 {
-	//y position got updated bt adding the value of the current y position
-	// and the gravity
-	ceiling = ceiling + gravity;
+
+
+	
+	if(IsKeyDown(KEY_SPACE))
+	{
+		ceiling -= 5;
+		
+	}else {
+
+		//y position got updated bt adding the value of the current y position
+		// and the gravity
+		ceiling = ceiling + gravity;
+		
+		
+
+	} 
 	if (ceiling + radius >= GetScreenHeight() || ceiling - radius <= 0)
 	{
 		//this is to reverse the gravitational force that make the
 		//the object move at the first place
-		gravity *= -1;
-		//DrawText("Game Over", 350,  300, 25, BLACK);
+		gravity *= 0;
+		
+		DrawText("Game Over", 350,  300, 25, BLACK);
+		
+		
 	}
 
 		

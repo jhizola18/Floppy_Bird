@@ -2,6 +2,7 @@
 #include "raylib.h"
 #include <string>
 #include "Bird.h"
+#include "Obstacles.h"
 
 class MainGame
 {
@@ -10,6 +11,7 @@ private:
 	void Update();
 
 	flappy flap;
+	Pipe obstacle_Up,obstacle_Down;
 	
 
 public:

@@ -136,10 +136,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Bird.h" />
+    <ClInclude Include="Obstacles.h" />
     <ClInclude Include="Window_Init.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bird.cpp" />
+    <ClCompile Include="Obstacles.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Window_Init.cpp" />
   </ItemGroup>
