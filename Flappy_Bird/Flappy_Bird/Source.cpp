@@ -9,7 +9,7 @@ int main(){
 	MainGame game{ screenWidth, screenHeight, 60 ,"Flappy Bird" };
 
 	while(!game.gameShouldClose())
-	{
+	{ 
 		game.gameLoop();
 	}
 	

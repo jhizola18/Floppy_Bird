@@ -9,9 +9,8 @@ class MainGame
 private:
 	void Draw();
 	void Update();
-
 	flappy flap;
-	Pipe obstacle_Up,obstacle_Down;
+	Pipe pipe;
 	
 
 public:

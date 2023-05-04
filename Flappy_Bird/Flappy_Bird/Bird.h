@@ -1,6 +1,7 @@
 #pragma once
 #include <raylib.h>
 
+
 class flappy
 {
 private:
@@ -11,8 +12,6 @@ private:
 	int gravity;
 	const Color color;
 	
-
-
 	
 public:
 
@@ -20,6 +19,4 @@ public:
 	void DrawBird();
 	void Draw();
 	void bird_Movement();
-	
-
 };                 
