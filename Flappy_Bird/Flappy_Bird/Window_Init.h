@@ -12,6 +12,7 @@ private:
 	flappy flap;
 	Pipe pipe;
 	
+	
 
 public:
 	MainGame(int Width, int Height, int fps, std::string title);

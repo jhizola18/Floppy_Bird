@@ -137,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="Bird.h" />
     <ClInclude Include="Obstacles.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="Window_Init.h" />
   </ItemGroup>
   <ItemGroup>

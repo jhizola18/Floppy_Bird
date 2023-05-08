@@ -39,11 +39,8 @@ void MainGame::gameLoop()
 
 void MainGame::Draw()
 {
-	
-
 	flap.Draw();
-	pipe.Draw();
-	
+	pipe.DrawObstacle();
 	ClearBackground(LIGHTGRAY);	
 }
 
