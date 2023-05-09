@@ -19,4 +19,10 @@ public:
 	void DrawBird();
 	void Draw();
 	void bird_Movement();
+	void setRadius(float radius_in);
+	float getRadius();
+
+	void setCeiling(int ceiling_in);
+	int getCeiling();
+
 };                 
