@@ -3,12 +3,12 @@
 #include <iostream>
 #include "Obstacles.h"
 
-flappy::flappy(int wall, int ceiling, float radius, Color color)
+flappy::flappy(Vector2 position, float radius, Color color)
 	:
+	position(position),
 	radius(radius),
-	color(color),
-	ceiling(ceiling),
-	wall(wall)
+	color(color)
+	
 	
 {
 	gravity = 5;
@@ -18,7 +18,9 @@ flappy::flappy(int wall, int ceiling, float radius, Color color)
 
 void flappy::DrawBird()
 {
-	DrawCircle(wall, ceiling, radius, color);
+	{
+		DrawCircle(position.x, position.y, radius, color);
+	}
 }
 
 void flappy::Draw()
@@ -33,15 +35,15 @@ void flappy::bird_Movement()
 	
 	if(IsKeyDown(KEY_SPACE))
 	{
-		ceiling -= 5;
+		position.y -= 5;
 		
 	}else {
 		//y position got updated bt adding the value of the current y position
 		// and the gravity
-		ceiling = ceiling + gravity;
+		position.y = position.y + gravity;
 	}
 
-	if (ceiling + radius >= GetScreenHeight() || ceiling - radius < 0)
+	if (position.y + radius >= GetScreenHeight() || position.y - radius < 0)
 	{
 		//this is to reverse the gravitational force that make the
 		//the object move at the first place
@@ -60,20 +62,23 @@ void flappy::setRadius(float radius_in)
 	radius = radius_in;
 }
 
+
+
 float flappy::getRadius()
 {
 	return radius;
 }
 
-void flappy::setCeiling(int ceiling_in)
+Vector2 flappy::getPos()
 {
-	ceiling = ceiling_in;
+	return position;
 }
 
-int flappy::getCeiling()
+void flappy::setPos(Vector2 pos)
 {
-	return ceiling;
+	position = pos;
 }
+
 
 
 

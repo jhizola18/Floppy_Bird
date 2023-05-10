@@ -1,8 +1,19 @@
-﻿  Obstacles.cpp
-C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Obstacles.cpp(31,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Obstacles.cpp(31,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+﻿  Bird.cpp
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Bird.cpp(22,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Bird.cpp(22,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  GameState.cpp
+  Obstacles.cpp
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Obstacles.cpp(28,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Obstacles.cpp(29,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Obstacles.cpp(31,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Obstacles.cpp(101,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Obstacles.cpp(101,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Obstacles.cpp(101,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  Flappy_Bird.vcxproj -> C:\Users\Hizola\source\repos\Flappy_Bird\x64\Debug\Flappy_Bird.exe
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Obstacles.cpp(104,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Obstacles.cpp(104,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Obstacles.cpp(104,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Source.cpp
+  Window_Init.cpp
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Window_Init.cpp(11,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Window_Init.cpp(9,11): error C2665: 'Collision::Collision': no overloaded function could convert all the argument types
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\GameState.h(15,2): message : could be 'Collision::Collision(Vector2,float,Rectangle &)'
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Window_Init.cpp(9,11): message : 'Collision::Collision(Vector2,float,Rectangle &)': cannot convert argument 3 from 'float' to 'Rectangle &'
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\Window_Init.cpp(9,11): message : while trying to match the argument list '(Vector2, float, float)'
+  Generating Code...

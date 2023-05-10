@@ -17,14 +17,18 @@ private:
 	float tubeSpeed;
 	const int maxTubes = 100;
 
-	flappy bird;
+	
 	
 
 public:
 	Pipe(Rectangle rec_in, float tubeSpeed_in, int maxTubes_in, Color color_in);
+	Pipe(const Pipe& other) = delete;
+	Pipe& operator = (const Pipe& other) = delete;
 	void DrawObstacle();
 	void Draw();
 	void ObstacleMovement();
 	void updateObstacle();
-	void checkCollision();
+	void setPosX(float posx);
+	float getPosX();
+
 };

@@ -1,7 +1,6 @@
 #include "Obstacles.h"
 #include <raylib.h>
 #include  <iostream>
-#include "Bird.h"
 
 
 ///FIX THE PIPES DISTANCE EACH OTHER
@@ -13,8 +12,9 @@ Pipe::Pipe(Rectangle rec_in, float tubeSpeed_in, int maxTubes_in, Color color_in
 	rec(rec_in),
 	color(color_in),
 	maxTubes(maxTubes_in),
-	tubeSpeed(tubeSpeed_in),
-	bird(80, GetScreenHeight() / 2, 20, BLACK)
+	tubeSpeed(tubeSpeed_in)
+
+
 
 {
 	
@@ -25,8 +25,8 @@ Pipe::Pipe(Rectangle rec_in, float tubeSpeed_in, int maxTubes_in, Color color_in
 	{
 		float tubeGap = 150.0f;;
 		float tubeWidth = 70.0f;
-		float minY = tubeGap; //120 min
-		float maxY = GetScreenHeight() - tubeGap - minY; //360 max
+		int minY = tubeGap; //120 min
+		int maxY = GetScreenHeight() - tubeGap - minY; //360 max
 
 		float topTubeHeight = GetRandomValue(minY, maxY);
 		float bottomTubeHeight = GetScreenHeight() - tubeGap - topTubeHeight;
@@ -65,6 +65,9 @@ void Pipe::DrawObstacle()
 		}
 	
 };
+
+
+
 
 
 void Pipe::updateObstacle()
@@ -125,21 +128,18 @@ void Pipe::ObstacleMovement()
 
 	
 }
-void Pipe::checkCollision()
-{	
-	bird.setCeiling(300);
-	bird.setRadius(20);
 
-	if (bird.getCeiling() + bird.getRadius() <= rec.width || bird.getCeiling() - bird.getRadius() <= rec.x)
-	{
-		DrawText("Game Over", 350, 300, 25, BLACK);
-	}
+void Pipe::setPosX(float posx)
+{
+	rec.x = posx;
+}
 
-	if (bird.getCeiling() - bird.getRadius() <= rec.width || bird.getCeiling() - bird.getRadius() <= rec.x)
-	{
-		DrawText("Game Over", 350, 300, 25, BLACK);
-	}
-};
+float Pipe::getPosX()
+{
+	 return rec.x;
+}
+
+
 
 
 

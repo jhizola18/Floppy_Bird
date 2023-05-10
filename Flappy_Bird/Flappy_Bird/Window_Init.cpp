@@ -6,13 +6,13 @@
 
 MainGame::MainGame(int Width, int Height, int fps, std::string title)
 	:
-	//What to do with 120 which is the value of the gap
-	//between two obstacle
-	flap(80, Height / 2, 20, BLACK),
-	//pipe({300,300, 60, 240},5,4,GREEN)
+	//get rectangle from the pipe class
+	collision(flap.getPos(), flap.getRadius(), pipe),
+	flap({80, Height / 2 - (float)20 }, (float)20, BLACK),
 	pipe({0,0,0,0}, 3, 4.0f,GREEN)
 	
 {
+	
 	assert(!GetWindowHandle());
 	InitWindow(Width, Height, title.c_str());
 	SetTargetFPS(fps);
@@ -40,10 +40,10 @@ void MainGame::gameLoop()
 
 void MainGame::Update()
 {
-
+	
 	flap.bird_Movement();
 	pipe.updateObstacle();
-	pipe.checkCollision();
+	collision.check_Collision();
 
 }
 

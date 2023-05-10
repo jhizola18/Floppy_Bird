@@ -5,24 +5,23 @@
 class flappy
 {
 private:
-
+	Vector2 position;
 	float radius;
-	int wall;
-	int ceiling;
 	int gravity;
 	const Color color;
 	
 	
 public:
 
-	flappy(int wall, int ceiling,float radius, Color color);
+	flappy(Vector2 position,float radius, Color color);
 	void DrawBird();
 	void Draw();
 	void bird_Movement();
 	void setRadius(float radius_in);
 	float getRadius();
+	void setPos(Vector2 pos);
+	Vector2 getPos();
 
-	void setCeiling(int ceiling_in);
-	int getCeiling();
+	
 
 };                 

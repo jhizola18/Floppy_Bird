@@ -3,6 +3,7 @@
 #include <string>
 #include "Bird.h"
 #include "Obstacles.h"
+#include "GameState.h"
 
 class MainGame
 {
@@ -11,7 +12,7 @@ private:
 	void Update();
 	flappy flap;
 	Pipe pipe;
-	
+	Collision collision;
 	
 
 public:

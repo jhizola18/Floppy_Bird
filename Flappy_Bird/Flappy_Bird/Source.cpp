@@ -12,7 +12,6 @@ int main()
 	while(!game.gameShouldClose())
 	{ 
 		game.gameLoop();
-	
 	}
 
 	return 0;
