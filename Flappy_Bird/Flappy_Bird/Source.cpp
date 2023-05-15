@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main()
-{
+  {
 
 	const int screenWidth = 800;
 	const int screenHeight = 600;
@@ -15,4 +15,4 @@ int main()
 	}
 
 	return 0;
-}
+}   

@@ -5,14 +5,13 @@
 
 class Collision {
 private:
-	Vector2 flapPosX;
-	float flapRad;
-	Rectangle& rec;
+	flappy flap;
+	Pipe pipe;
 
-	flappy& flap;
-	Pipe& pipe;
+	
+
 public:
-	Collision(Vector2 flapPosX, float flapRad,  Rectangle& rec);
+	Collision(flappy flap, Pipe pipe);
 	void check_Collision();
 
 };

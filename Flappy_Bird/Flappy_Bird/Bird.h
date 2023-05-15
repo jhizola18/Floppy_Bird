@@ -22,6 +22,4 @@ public:
 	void setPos(Vector2 pos);
 	Vector2 getPos();
 
-	
-
 };                 

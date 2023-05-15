@@ -7,10 +7,10 @@
 MainGame::MainGame(int Width, int Height, int fps, std::string title)
 	:
 	//get rectangle from the pipe class
-	collision(flap.getPos(), flap.getRadius(), pipe),
-	flap({80, Height / 2 - (float)20 }, (float)20, BLACK),
-	pipe({0,0,0,0}, 3, 4.0f,GREEN)
-	
+	collision(flap, pipe),
+	flap({80.0f, Height / 2 - (float)20 }, (float)20, BLACK),
+	pipe(3, 4.0f,GREEN)
+
 {
 	
 	assert(!GetWindowHandle());
@@ -38,12 +38,14 @@ void MainGame::gameLoop()
 	EndDrawing();
 }
 
+
 void MainGame::Update()
 {
 	
 	flap.bird_Movement();
-	pipe.updateObstacle();
 	collision.check_Collision();
+	pipe.updateObstacle();
+	
 
 }
 
@@ -51,8 +53,5 @@ void MainGame::Draw()
 {
 	flap.Draw();
 	pipe.DrawObstacle();
-	ClearBackground(LIGHTGRAY);	
+	ClearBackground(LIGHTGRAY);
 }
-
-
-

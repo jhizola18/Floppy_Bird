@@ -1,0 +1,5 @@
+﻿  GameState.cpp
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\GameState.cpp(28,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\GameState.cpp(28,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Hizola\source\repos\Flappy_Bird\Flappy_Bird\GameState.cpp(28,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Flappy_Bird.vcxproj -> C:\Users\Hizola\source\repos\Flappy_Bird\Debug\Flappy_Bird.exe

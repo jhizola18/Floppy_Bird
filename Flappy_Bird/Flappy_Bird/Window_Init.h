@@ -5,6 +5,7 @@
 #include "Obstacles.h"
 #include "GameState.h"
 
+
 class MainGame
 {
 private:
@@ -12,8 +13,8 @@ private:
 	void Update();
 	flappy flap;
 	Pipe pipe;
+
 	Collision collision;
-	
 
 public:
 	MainGame(int Width, int Height, int fps, std::string title);
